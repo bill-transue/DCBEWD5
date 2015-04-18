@@ -35,3 +35,39 @@
 ## Remember to cast input from the Player into the appropriate data type.
 ##
 ################################################################################
+secret_number = 5
+
+puts 'Welcome my fellow classmates, what is your name'
+name = gets.chomp
+puts "Hey #{name}, you have 3 guesses to get the secret number right..."
+puts "Make it a random number between 1 and 10"
+first_guess = gets.chomp
+if secret_number == first_guess
+	puts "That's true"
+else
+	puts "2 more guesses"
+    if first_guess < secret_number
+    	puts "Your guess is low."
+    else 
+    	puts "Your guess is high."
+    end 
+    second_guess = gets.chomp
+     if secret_number == second_guess
+        puts "Your guess is correct"
+     else 
+      if first_guess > secret_number
+        puts "Your guess is high"
+      elsif second_guess < secret_number
+        puts "Your guess is low"
+      end
+      puts "Last guess: "
+      third_guess = gets.chomp
+        if third_guess == secret_number
+          puts "Your correct"
+        else 
+          puts "Game is over #{name}, However the secret_number is #{secret_number}"
+          
+        end
+      end
+    end
+  end
